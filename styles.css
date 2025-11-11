@@ -1,0 +1,453 @@
+/* Edmund Bogen Brand - College Planning App */
+/* Primary Navy: #1a3e5c | Accent Blue: #00a8e1 | White: #ffffff */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: linear-gradient(135deg, #1a3e5c 0%, #0d1f2d 100%);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 0;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #1a3e5c 0%, #0d2a42 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+    position: relative;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #00a8e1;
+}
+
+.header h1 {
+    font-size: 2.8em;
+    margin-bottom: 16px;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.header p {
+    font-size: 1.1em;
+    opacity: 0.95;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.nav-tabs {
+    display: flex;
+    background: #f4f4f4;
+    border-bottom: 4px solid #00a8e1;
+    overflow-x: auto;
+}
+
+.nav-tab {
+    padding: 18px 32px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #666;
+    transition: all 0.3s;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+.nav-tab:hover {
+    background: #e8e8e8;
+    color: #1a3e5c;
+}
+
+.nav-tab.active {
+    background: white;
+    color: #00a8e1;
+    border-bottom: 4px solid #00a8e1;
+    margin-bottom: -4px;
+}
+
+.content {
+    padding: 60px 40px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.kid-card {
+    background: linear-gradient(135deg, #1a3e5c 0%, #0d2a42 100%);
+    color: white;
+    padding: 32px;
+    border-radius: 0;
+    margin-bottom: 32px;
+    position: relative;
+    border-left: 5px solid #00a8e1;
+}
+
+.kid-card h3 {
+    font-size: 1.9em;
+    margin-bottom: 16px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.kid-card p {
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+.timeline {
+    margin-top: 32px;
+}
+
+.timeline-item {
+    background: white;
+    color: #333;
+    padding: 24px;
+    margin: 16px 0;
+    border-radius: 0;
+    border-left: 5px solid #00a8e1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.timeline-item strong {
+    color: #1a3e5c;
+    font-weight: 600;
+}
+
+.timeline-item ul {
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+.timeline-item li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.calculator {
+    background: #f4f4f4;
+    padding: 32px;
+    border-radius: 0;
+    margin: 32px 0;
+    border-left: 5px solid #00a8e1;
+}
+
+.calculator h3 {
+    color: #1a3e5c;
+    margin-bottom: 24px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    font-size: 1.4em;
+}
+
+.input-group {
+    margin: 20px 0;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1a3e5c;
+    letter-spacing: 0.02em;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 0;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus, .input-group select:focus {
+    outline: none;
+    border-color: #00a8e1;
+}
+
+.input-group small {
+    display: block;
+    margin-top: 6px;
+    color: #666;
+}
+
+.btn {
+    background: #00a8e1;
+    color: white;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 0;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover {
+    background: #0090c5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 168, 225, 0.3);
+}
+
+.result {
+    background: white;
+    padding: 24px;
+    border-radius: 0;
+    margin-top: 24px;
+    border-left: 5px solid #00a8e1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.result h4 {
+    color: #00a8e1;
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.strategy-card {
+    background: white;
+    border: 2px solid #e8e8e8;
+    border-radius: 0;
+    padding: 28px;
+    transition: all 0.3s;
+    border-left: 5px solid #00a8e1;
+}
+
+.strategy-card:hover {
+    border-color: #00a8e1;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+}
+
+.strategy-card h4 {
+    color: #1a3e5c;
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.savings-amount {
+    font-size: 1.6em;
+    color: #00a8e1;
+    font-weight: 700;
+    margin: 12px 0;
+    letter-spacing: 0.01em;
+}
+
+.priority-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 0;
+    font-size: 0.8em;
+    font-weight: 700;
+    margin-top: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.priority-high {
+    background: #00a8e1;
+    color: white;
+}
+
+.priority-medium {
+    background: #1a3e5c;
+    color: white;
+}
+
+.priority-low {
+    background: #95a5a6;
+    color: white;
+}
+
+.checklist {
+    background: #f4f4f4;
+    padding: 24px;
+    border-radius: 0;
+    margin: 24px 0;
+}
+
+.checklist-item {
+    padding: 16px;
+    margin: 12px 0;
+    background: white;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.checklist-item:hover {
+    background: #e8e8e8;
+    border-left-color: #00a8e1;
+}
+
+.checklist-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+    cursor: pointer;
+    accent-color: #00a8e1;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    background: white;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.comparison-table th {
+    background: #1a3e5c;
+    color: white;
+    padding: 18px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.comparison-table td {
+    padding: 18px;
+    border-bottom: 1px solid #e8e8e8;
+    line-height: 1.6;
+}
+
+.comparison-table tr:hover {
+    background: #f4f4f4;
+}
+
+.highlight-box {
+    background: #fff9e6;
+    border-left: 5px solid #00a8e1;
+    padding: 28px;
+    margin: 28px 0;
+    border-radius: 0;
+}
+
+.highlight-box h4 {
+    color: #1a3e5c;
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.section {
+    margin: 48px 0;
+}
+
+.section h2 {
+    color: #1a3e5c;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 4px solid #00a8e1;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+
+.section h3 {
+    color: #1a3e5c;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.section ol, .section ul {
+    margin-left: 24px;
+    line-height: 2;
+}
+
+.section li {
+    margin-bottom: 12px;
+}
+
+@media print {
+    body {
+        background: white;
+    }
+    .nav-tabs, .btn {
+        display: none;
+    }
+    .container {
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    .header {
+        padding: 40px 24px;
+    }
+    .content {
+        padding: 32px 24px;
+    }
+    .nav-tab {
+        padding: 14px 18px;
+        font-size: 0.8em;
+    }
+    .strategy-grid {
+        grid-template-columns: 1fr;
+    }
+}
